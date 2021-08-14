@@ -8,7 +8,7 @@ inventario = Tk()
 inventario.iconbitmap(Ayudas.icono)
 
 inventario.title("Inventario")
-inventario.configure(background = Ayudas.azul_claro)
+inventario.configure(background = Ayudas.azul_hielo)
 
 posx = int(inventario.winfo_screenwidth() / 2 - (Ayudas.ancho / 2))
 posy = int(inventario.winfo_screenheight() / 2 - (Ayudas.alto / 2))
@@ -16,13 +16,13 @@ inventario.geometry("{}x{}+{}+{}".format(Ayudas.ancho, Ayudas.alto, posx, posy))
 inventario.resizable(0, 0)
 
 #-----Titulo-----
-titulo = Label(inventario, text= "Inventario", font= Ayudas.titulo, bg= Ayudas.azul_claro, fg= Ayudas.negro_letra)
-titulo.place(relx=0.45, rely=0.08)
+titulo = Label(inventario, text= "Inventario", font= Ayudas.titulo, bg= Ayudas.azul_hielo, fg= Ayudas.negro_letra)
+titulo.place(relx=0.45, rely=0.1)
 
 #-----Logo-----
 ImgCaja = ImageTk.PhotoImage(Image.open("Imagenes/caja.png"))
-LogoCaja = Label (image = ImgCaja,height = 70 , width= 70, bg= Ayudas.azul_claro)
-LogoCaja.place(relx=0.37, rely=0.05)
+LogoCaja = Label (image = ImgCaja,height = 70 , width= 70, bg= Ayudas.azul_hielo)
+LogoCaja.place(relx=0.37, rely=0.07)
 
 #-----Imagenes inventario-----
 img1 = ImageTk.PhotoImage(Image.open("Imagenes/arepa.jpg"))

@@ -2,6 +2,7 @@ from PIL import ImageTk, Image
 
 # Colores:
 blanco= '#FFFFFF'
+azul_hielo ='#C2F3F3'
 azul_claro='#87ECFF'
 azul_negro='#47525E'
 naranja='#FF9052'
