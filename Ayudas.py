@@ -1,21 +1,24 @@
 from PIL import ImageTk, Image
 
-class Ayudas:
+# Colores:
+blanco= '#FFFFFF'
+azul_claro='#87ECFF'
+azul_negro='#47525E'
+naranja='#FF9052'
+negro_letra='#343F4B'
+negro='#000000'
 
-    #Colores:
+# Tipos de letras:
+#family, size, weight (peso): bold (negrilla) o normal, slant (apariencia): italic (cursiva) or roman (normal), underline (subrayado), overstrike (tachado)
+titulo= ("Georgia 20 bold roman")
+subtitulo= ("Georgia 15 bold roman")
+boton= ("Georgia 13 bold roman")
+boton_pequeño= ("Georgia 10 bold roman")
+normal= ("Georgia 10 normal italic")
 
-    azul_hielo = '#d7fffe'
-    blanco = '#FFFFFF'
-    naranja = '#E59866'
-    gris = '#CCCCCC'
-    negro = '#000000'
+#Icono, logo, imagenes:
+icono= ("Imagenes/nevera.ico")
 
-    #Tipos de letras
-    #Letras family, size,weight: bold or normal, slant: italic or roman, underline, overstrike
-
-    letra_grande= ("Arial 20 bold roman")
-    letra_mediana = ("Arial 16 bold roman")
-    letra_pequeña = ("Arial 12 bold roman")
-
-    #Imagenes
-    imagen1 = Image.open("imagenes/nevera2.jpg").resize((100,100), Image.ANTIALIAS)
+#Tamaño ventanas
+ancho= 1020
+alto= 670
