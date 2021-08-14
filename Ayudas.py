@@ -24,3 +24,5 @@ icono= ("Imagenes/nevera.ico")
 #Tamaño ventanas
 ancho= 1020
 alto= 670
+
+

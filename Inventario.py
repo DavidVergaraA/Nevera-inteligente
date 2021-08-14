@@ -92,6 +92,4 @@ Boton2_Im6.place(relx=0.771, rely=0.883)
 Boton3_Im6 = Button (bg=Ayudas.blanco, font=Ayudas.boton_pequeño, height= 1, width= 7, text = "Eliminar")
 Boton3_Im6.place(relx=0.842, rely=0.883)
 
-
-
 inventario.mainloop()

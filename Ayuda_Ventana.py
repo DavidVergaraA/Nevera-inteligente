@@ -2,6 +2,7 @@ from tkinter import *
 from PIL import ImageTk, Image
 import Ayudas
 
+
 #-----Ventana de Ayuda_ventana-----
 Ayuda_ventana = Tk()
 
@@ -30,5 +31,6 @@ Boton_Ayuda.place(relx = 0.378, rely = 0.32)
 
 Boton_AcercaDe = Button(height = 4, width = 17 ,text = "Acerca de..." , bg = Ayudas.gris, font = Ayudas.subtitulo , fg = Ayudas.blanco  )
 Boton_AcercaDe.place(relx = 0.378, rely = 0.62)
+  
 
 Ayuda_ventana.mainloop()

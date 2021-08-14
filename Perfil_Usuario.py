@@ -35,5 +35,14 @@ txtCorreo.place (relx = 0.42, rely = 0.34)
 printCorreo = Label (bg = Ayudas.blanco , font = Ayudas.normal , width = 30 )
 printCorreo.place (relx = 0.52, rely = 0.35)
 
+#-----Botones-----
+Boton_Cambiar_Contraseña = Button(height = 3, width = 17 ,text = "Cambiar contraseña" , bg = Ayudas.gris, font = Ayudas.subtitulo , fg = Ayudas.blanco  )
+Boton_Cambiar_Contraseña.place(relx = 0.6, rely = 0.65)
+
+#-----AlimentosActuales-----
+TituloAlimentosActuales = Label ( text = "Alimentos necesarios",bg=Ayudas.azul_hielo, font = Ayudas.subtitulo)
+TituloAlimentosActuales.place (relx = 0.176, rely = 0.55)
+AlimentosActuales = Label (bg = Ayudas.blanco, height = 13, width = 44)
+AlimentosActuales.place (relx = 0.133, rely = 0.62 )
 
 perfil_Usuario.mainloop()
