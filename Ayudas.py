@@ -7,6 +7,7 @@ azul_negro='#47525E'
 naranja='#FF9052'
 negro_letra='#343F4B'
 negro='#000000'
+gris= '#444949'
 
 # Tipos de letras:
 #family, size, weight (peso): bold (negrilla) o normal, slant (apariencia): italic (cursiva) or roman (normal), underline (subrayado), overstrike (tachado)

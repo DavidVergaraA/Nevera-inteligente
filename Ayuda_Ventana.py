@@ -1,4 +1,5 @@
 from tkinter import *
+from tkinter.font import Font
 from PIL import ImageTk, Image
 import Ayudas
 
@@ -25,5 +26,10 @@ LogoInterrogacion = Label (image = ImgInterrogacion,height = 70 , width= 70, bg=
 LogoInterrogacion.place(relx=0.40, rely=0.05)
 
 #-----Botones-----
+Boton_Ayuda = Button(height = 4, width = 17 ,text = "Ayuda" , bg = Ayudas.gris, font = Ayudas.subtitulo , fg = Ayudas.blanco  )
+Boton_Ayuda.place(relx = 0.378, rely = 0.32)
+
+Boton_AcercaDe = Button(height = 4, width = 17 ,text = "Acerca de..." , bg = Ayudas.gris, font = Ayudas.subtitulo , fg = Ayudas.blanco  )
+Boton_AcercaDe.place(relx = 0.378, rely = 0.62)
 
 Ayuda_ventana.mainloop()
