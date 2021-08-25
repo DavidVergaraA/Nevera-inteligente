@@ -10,9 +10,9 @@ perfil_Usuario.iconbitmap(Ayudas.icono)
 perfil_Usuario.title("Perfil de usuario")
 perfil_Usuario.configure(background = Ayudas.azul_hielo)
 
-posx = int(perfil_Usuario.winfo_screenwidth() / 2 - (Ayudas.ancho / 2))
-posy = int(perfil_Usuario.winfo_screenheight() / 2 - (Ayudas.alto / 2))
-perfil_Usuario.geometry("{}x{}+{}+{}".format(Ayudas.ancho, Ayudas.alto, posx, posy))
+posx = int(perfil_Usuario.winfo_screenwidth() / 2 - (Ayudas.ancho2 / 2))
+posy = int(perfil_Usuario.winfo_screenheight() / 2 - (Ayudas.alto2 / 2))
+perfil_Usuario.geometry("{}x{}+{}+{}".format(Ayudas.ancho2, Ayudas.alto2, posx, posy))
 perfil_Usuario.resizable(0, 0)
 
 #-----Titulo-----
@@ -36,8 +36,8 @@ printCorreo = Label (bg = Ayudas.blanco , font = Ayudas.normal , width = 30 )
 printCorreo.place (relx = 0.52, rely = 0.35)
 
 #-----Botones-----
-Boton_Cambiar_Contraseña = Button(height = 3, width = 17 ,text = "Cambiar contraseña" , bg = Ayudas.gris, font = Ayudas.subtitulo , fg = Ayudas.blanco  )
-Boton_Cambiar_Contraseña.place(relx = 0.6, rely = 0.65)
+Boton_Cambiar_Contrasena = Button(height = 3, width = 17 ,text = "Cambiar contraseña" , bg = Ayudas.gris, font = Ayudas.subtitulo , fg = Ayudas.blanco  )
+Boton_Cambiar_Contrasena.place(relx = 0.6, rely = 0.65)
 
 #-----AlimentosActuales-----
 TituloAlimentosActuales = Label ( text = "Alimentos necesarios",bg=Ayudas.azul_hielo, font = Ayudas.subtitulo)

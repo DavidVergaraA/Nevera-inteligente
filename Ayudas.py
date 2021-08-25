@@ -1,6 +1,6 @@
 from PIL import ImageTk, Image
 
-# Colores:
+    # Colores:
 blanco= '#FFFFFF'
 azul_hielo ='#C2F3F3'
 azul_claro='#87ECFF'
@@ -10,19 +10,18 @@ negro_letra='#343F4B'
 negro='#000000'
 gris= '#444949'
 
-# Tipos de letras:
-#family, size, weight (peso): bold (negrilla) o normal, slant (apariencia): italic (cursiva) or roman (normal), underline (subrayado), overstrike (tachado)
+    # Tipos de letras:
 titulo= ("Georgia 20 bold roman")
 subtitulo= ("Georgia 15 bold roman")
 boton= ("Georgia 13 bold roman")
-boton_pequeño= ("Georgia 10 bold roman")
+boton_pequeno= ("Georgia 10 bold roman")
 normal= ("Georgia 10 normal italic")
 
-#Icono, logo, imagenes:
+    #Icono
 icono= ("Imagenes/nevera.ico")
 
-#Tamaño ventanas
-ancho= 1020
-alto= 670
-
-
+    #Tamaño ventanas
+ancho= 720
+alto= 512
+ancho2= 1020
+alto2= 670
