@@ -137,6 +137,7 @@ class AgregarAlimento:
         
         except ValueError:
 
+            PopUpAgregar.destroy()
             messagebox.showerror("Error","El valor ingresado no es un número entero")
 
     #-----Inicio de las funciones (VE es ventana emergente)-----
@@ -176,6 +177,7 @@ class AgregarAlimento:
         global EntryAgregarLeche
         EntryAgregarLeche = EntryAgregar 
         LabelTituloAgregar.config(text="Agregar bolsas de leche")
+        LabelTituloAgregar.place(relx = 0.1)
         BotonSalirAgregar.config(command= lambda: [AgregarAlimento.TomarValorLeche(),AgregarAlimento.SalirBotonAgregar()])
 
     def TomarValorLeche():
@@ -205,6 +207,7 @@ class AgregarAlimento:
         global EntryAgregarCarne
         EntryAgregarCarne = EntryAgregar 
         LabelTituloAgregar.config(text="Agregar libras de carne")
+        LabelTituloAgregar.place(relx = 0.1)
         BotonSalirAgregar.config(command= lambda: [AgregarAlimento.TomarValorCarne(),AgregarAlimento.SalirBotonAgregar()])
 
     def TomarValorCarne():
@@ -263,6 +266,7 @@ class AgregarAlimento:
         global EntryAgregarTomate
         EntryAgregarTomate = EntryAgregar 
         LabelTituloAgregar.config(text="Agregar tomates")
+        LabelTituloAgregar.place(relx = 0.2)
         BotonSalirAgregar.config(command= lambda: [AgregarAlimento.TomarValorTomate(),AgregarAlimento.SalirBotonAgregar()])
 
     def TomarValorTomate():
@@ -292,6 +296,7 @@ class AgregarAlimento:
         global EntryAgregarSalchichas
         EntryAgregarSalchichas = EntryAgregar 
         LabelTituloAgregar.config(text="Agregar salchichas")
+        LabelTituloAgregar.place(relx = 0.15)
         BotonSalirAgregar.config(command= lambda: [AgregarAlimento.TomarValorSalchichas(),AgregarAlimento.SalirBotonAgregar()])
 
     def TomarValorSalchichas():
@@ -360,6 +365,7 @@ class EliminarAlimento:
         
         except ValueError:
 
+            PopUpEliminar.destroy()
             messagebox.showerror("Error","Ingrese un número entero")
 
 
@@ -406,6 +412,7 @@ class EliminarAlimento:
         global EntryEliminarLeche
         EntryEliminarLeche = EntryEliminar
         LabelTituloEliminar.config(text="Eliminar bolsas de leche")
+        LabelTituloEliminar.place(relx = 0.08)
         BotonSalirEliminar.config(command= lambda: [EliminarAlimento.TomarValorLeche(),EliminarAlimento.SalirBotonEliminar()])
 
     def TomarValorLeche():
@@ -443,6 +450,7 @@ class EliminarAlimento:
         global EntryEliminarCarne
         EntryEliminarCarne = EntryEliminar
         LabelTituloEliminar.config(text="Eliminar libras de carne")
+        LabelTituloEliminar.place(relx = 0.095)
         BotonSalirEliminar.config(command= lambda: [EliminarAlimento.TomarValorCarne(),EliminarAlimento.SalirBotonEliminar()])
 
     def TomarValorCarne():
@@ -480,6 +488,7 @@ class EliminarAlimento:
         global EntryEliminarHuevos
         EntryEliminarHuevos = EntryEliminar
         LabelTituloEliminar.config(text="Eliminar huevos")
+        LabelTituloEliminar.place(relx = 0.21)
         BotonSalirEliminar.config(command= lambda: [EliminarAlimento.TomarValorHuevos(),EliminarAlimento.SalirBotonEliminar()])
 
     def TomarValorHuevos():
@@ -517,6 +526,7 @@ class EliminarAlimento:
         global EntryEliminarTomates
         EntryEliminarTomates = EntryEliminar
         LabelTituloEliminar.config(text="Eliminar tomates")
+        LabelTituloEliminar.place(relx = 0.19)
         BotonSalirEliminar.config(command= lambda: [EliminarAlimento.TomarValorTomates(),EliminarAlimento.SalirBotonEliminar()])
 
     def TomarValorTomates():
@@ -554,6 +564,7 @@ class EliminarAlimento:
         global EntryEliminarSalchichas
         EntryEliminarSalchichas = EntryEliminar
         LabelTituloEliminar.config(text="Eliminar salchichas")
+        LabelTituloEliminar.place(relx = 0.15)
         BotonSalirEliminar.config(command= lambda: [EliminarAlimento.TomarValorSalchichas(),EliminarAlimento.SalirBotonEliminar()])
 
     def TomarValorSalchichas():
