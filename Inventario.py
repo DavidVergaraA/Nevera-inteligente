@@ -1,4 +1,5 @@
 from tkinter import *
+from InventarioFuncionalidad import *
 from PIL import ImageTk, Image
 import Ayudas
 #from MenuBar import MenuClass
@@ -45,7 +46,7 @@ img4 = ImageTk.PhotoImage(Image.open("Imagenes/huevo.jpg"))
 Imagen4 = Label(image=img4, height=155, width=213)
 Imagen4.place(relx=0.1, rely=0.65)
 
-img5 = ImageTk.PhotoImage(Image.open("Imagenes/quesito.jpg"))
+img5 = ImageTk.PhotoImage(Image.open("Imagenes/tomate.jpg"))
 Imagen5 = Label(image=img5, height=155, width=213)
 Imagen5.place(relx=0.4, rely=0.65)
 
@@ -54,67 +55,82 @@ Imagen6 = Label(image=img6, height=155, width=213)
 Imagen6.place(relx=0.7, rely=0.65)
 
 # -----Botones-----
-Boton1_Im1 = Button(
-    bg=Ayudas.blanco, font=Ayudas.boton_pequeno, height=1, width=7, text="Cantidad")
+Boton1_Im1 = Button(bg=Ayudas.blanco, font=Ayudas.boton_pequeno, height=1, width=7, text="Cantidad", 
+    command= lambda:[CantidadAlimento(inventario),CantidadAlimento.VE_CantidadArepas()])
 Boton1_Im1.place(relx=0.099, rely=0.533)
 Boton2_Im1 = Button(
-    bg=Ayudas.blanco, font=Ayudas.boton_pequeno, height=1, width=7, text="Agregar")
+    bg=Ayudas.blanco, font=Ayudas.boton_pequeno, height=1, width=7, text="Agregar", 
+    command= lambda:[AgregarAlimento(inventario),AgregarAlimento.VE_AgregarArepas()])
 Boton2_Im1.place(relx=0.171, rely=0.533)
 Boton3_Im1 = Button(
-    bg=Ayudas.blanco, font=Ayudas.boton_pequeno, height=1, width=7, text="Eliminar")
+    bg=Ayudas.blanco, font=Ayudas.boton_pequeno, height=1, width=7, text="Eliminar", 
+    command= lambda:[EliminarAlimento(inventario),EliminarAlimento.VE_EliminarArepas()])
 Boton3_Im1.place(relx=0.242, rely=0.533)
 
 Boton1_Im2 = Button(
-    bg=Ayudas.blanco, font=Ayudas.boton_pequeno, height=1, width=7, text="Cantidad")
+    bg=Ayudas.blanco, font=Ayudas.boton_pequeno, height=1, width=7, text="Cantidad", 
+    command= lambda:[CantidadAlimento(inventario),CantidadAlimento.VE_CantidadLeche()])
 Boton1_Im2.place(relx=0.399, rely=0.533)
 Boton2_Im2 = Button(
-    bg=Ayudas.blanco, font=Ayudas.boton_pequeno, height=1, width=7, text="Agregar")
+    bg=Ayudas.blanco, font=Ayudas.boton_pequeno, height=1, width=7, text="Agregar", 
+    command= lambda:[AgregarAlimento(inventario),AgregarAlimento.VE_AgregarLeche()])
 Boton2_Im2.place(relx=0.471, rely=0.533)
 Boton3_Im2 = Button(
-    bg=Ayudas.blanco, font=Ayudas.boton_pequeno, height=1, width=7, text="Eliminar")
+    bg=Ayudas.blanco, font=Ayudas.boton_pequeno, height=1, width=7, text="Eliminar", 
+    command= lambda:[EliminarAlimento(inventario),EliminarAlimento.VE_EliminarLeche()])
 Boton3_Im2.place(relx=0.542, rely=0.533)
 
 Boton1_Im3 = Button(
-    bg=Ayudas.blanco, font=Ayudas.boton_pequeno, height=1, width=7, text="Cantidad")
+    bg=Ayudas.blanco, font=Ayudas.boton_pequeno, height=1, width=7, text="Cantidad", 
+    command= lambda:[CantidadAlimento(inventario),CantidadAlimento.VE_CantidadCarne()])
 Boton1_Im3.place(relx=0.699, rely=0.533)
 Boton2_Im3 = Button(
-    bg=Ayudas.blanco, font=Ayudas.boton_pequeno, height=1, width=7, text="Agregar")
+    bg=Ayudas.blanco, font=Ayudas.boton_pequeno, height=1, width=7, text="Agregar", 
+    command= lambda:[AgregarAlimento(inventario),AgregarAlimento.VE_AgregarCarne()])
 Boton2_Im3.place(relx=0.771, rely=0.533)
 Boton3_Im3 = Button(
-    bg=Ayudas.blanco, font=Ayudas.boton_pequeno, height=1, width=7, text="Eliminar")
+    bg=Ayudas.blanco, font=Ayudas.boton_pequeno, height=1, width=7, text="Eliminar", 
+    command= lambda:[EliminarAlimento(inventario),EliminarAlimento.VE_EliminarCarne()])
 Boton3_Im3.place(relx=0.842, rely=0.533)
 
 Boton1_Im4 = Button(
-    bg=Ayudas.blanco, font=Ayudas.boton_pequeno, height=1, width=7, text="Cantidad")
+    bg=Ayudas.blanco, font=Ayudas.boton_pequeno, height=1, width=7, text="Cantidad", 
+    command= lambda:[CantidadAlimento(inventario),CantidadAlimento.VE_CantidadHuevos()])
 Boton1_Im4.place(relx=0.099, rely=0.883)
 Boton2_Im4 = Button(
-    bg=Ayudas.blanco, font=Ayudas.boton_pequeno, height=1, width=7, text="Agregar")
+    bg=Ayudas.blanco, font=Ayudas.boton_pequeno, height=1, width=7, text="Agregar", 
+    command= lambda:[AgregarAlimento(inventario),AgregarAlimento.VE_AgregarHuevos()])
 Boton2_Im4.place(relx=0.171, rely=0.883)
 Boton3_Im4 = Button(
-    bg=Ayudas.blanco, font=Ayudas.boton_pequeno, height=1, width=7, text="Eliminar")
+    bg=Ayudas.blanco, font=Ayudas.boton_pequeno, height=1, width=7, text="Eliminar", 
+    command= lambda:[EliminarAlimento(inventario),EliminarAlimento.VE_EliminarHuevos()])
 Boton3_Im4.place(relx=0.242, rely=0.883)
 
 Boton1_Im5 = Button(
-    bg=Ayudas.blanco, font=Ayudas.boton_pequeno, height=1, width=7, text="Cantidad")
+    bg=Ayudas.blanco, font=Ayudas.boton_pequeno, height=1, width=7, text="Cantidad", 
+    command= lambda:[CantidadAlimento(inventario),CantidadAlimento.VE_CantidadTomate()])
 Boton1_Im5.place(relx=0.399, rely=0.883)
 Boton2_Im5 = Button(
-    bg=Ayudas.blanco, font=Ayudas.boton_pequeno, height=1, width=7, text="Agregar")
+    bg=Ayudas.blanco, font=Ayudas.boton_pequeno, height=1, width=7, text="Agregar", 
+    command= lambda:[AgregarAlimento(inventario),AgregarAlimento.VE_AgregarTomate()])
 Boton2_Im5.place(relx=0.471, rely=0.883)
 Boton3_Im5 = Button(
-    bg=Ayudas.blanco, font=Ayudas.boton_pequeno, height=1, width=7, text="Eliminar")
+    bg=Ayudas.blanco, font=Ayudas.boton_pequeno, height=1, width=7, text="Eliminar", 
+    command= lambda:[EliminarAlimento(inventario),EliminarAlimento.VE_EliminarTomates()])
 Boton3_Im5.place(relx=0.542, rely=0.883)
 
 Boton1_Im6 = Button(
-    bg=Ayudas.blanco, font=Ayudas.boton_pequeno, height=1, width=7, text="Cantidad")
+    bg=Ayudas.blanco, font=Ayudas.boton_pequeno, height=1, width=7, text="Cantidad", 
+    command= lambda:[CantidadAlimento(inventario),CantidadAlimento.VE_CantidadSalchicha()])
 Boton1_Im6.place(relx=0.699, rely=0.883)
 Boton2_Im6 = Button(
-    bg=Ayudas.blanco, font=Ayudas.boton_pequeno, height=1, width=7, text="Agregar")
+    bg=Ayudas.blanco, font=Ayudas.boton_pequeno, height=1, width=7, text="Agregar", 
+    command= lambda:[AgregarAlimento(inventario),AgregarAlimento.VE_AgregarSalchichas()])
 Boton2_Im6.place(relx=0.771, rely=0.883)
 Boton3_Im6 = Button(
-    bg=Ayudas.blanco, font=Ayudas.boton_pequeno, height=1, width=7, text="Eliminar")
+    bg=Ayudas.blanco, font=Ayudas.boton_pequeno, height=1, width=7, text="Eliminar", 
+    command= lambda:[EliminarAlimento(inventario),EliminarAlimento.VE_EliminarSalchichas()])
 Boton3_Im6.place(relx=0.842, rely=0.883)
 
-"""MenuClass.MenuFunction(inventario)
-    MenuClass.Traer_Inventario(inventario_funcion)"""
 
 inventario.mainloop()

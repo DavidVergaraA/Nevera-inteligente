@@ -1,0 +1,20 @@
+Archivo plano para obtener la información del inventario
+--------------------------------------------------------
+Arepas=
+11
+-------
+Leche=
+1
+-------
+Carne=
+1
+-------
+Huevos=
+18
+-------
+Tomate=
+21
+-------
+Salchichas=
+10
+----------------
