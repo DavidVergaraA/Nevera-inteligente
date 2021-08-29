@@ -1,20 +1,20 @@
 Archivo plano para obtener la información del inventario
 --------------------------------------------------------
 Arepas=
-11
+0
 -------
 Leche=
-1
+0
 -------
 Carne=
-1
+0
 -------
 Huevos=
-18
+0
 -------
 Tomate=
-21
+0
 -------
 Salchichas=
-10
-----------------
+0
+-------

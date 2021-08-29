@@ -1,4 +1,5 @@
 from tkinter import *
+from Perfil_Usuario_Funcionalidad import FormularioNotificaciones
 from PIL import ImageTk, Image
 import Ayudas
 
@@ -38,8 +39,10 @@ def PerfilUsuarioVentana():
     printCorreo.place (relx = 0.52, rely = 0.35)
 
     #-----Botones-----
-    Boton_Cambiar_Contrasena = Button(height = 3, width = 17 ,text = "Cambiar contraseña" , bg = Ayudas.gris, font = Ayudas.subtitulo , fg = Ayudas.blanco  )
-    Boton_Cambiar_Contrasena.place(relx = 0.6, rely = 0.65)
+    Boton_Cambiar_Contrasena = Button(height = 3, width = 17 ,text = "Cambiar contraseña" , bg = Ayudas.gris, font = Ayudas.subtitulo , fg = Ayudas.blanco )
+    Boton_Cambiar_Contrasena.place(relx = 0.6, rely = 0.57)
+    Boton_ConfigurarNotificaciones = Button(height = 3, width = 17 ,text = "Configurar \n notificaciones" , bg = Ayudas.gris, font = Ayudas.subtitulo , fg = Ayudas.blanco , command= lambda:[FormularioNotificaciones.formulario(perfil_Usuario)])
+    Boton_ConfigurarNotificaciones.place(relx = 0.6, rely = 0.77)
 
     #-----AlimentosActuales-----
     TituloAlimentosActuales = Label ( text = "Alimentos necesarios",bg=Ayudas.azul_hielo, font = Ayudas.subtitulo)
