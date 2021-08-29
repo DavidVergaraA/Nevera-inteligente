@@ -194,7 +194,7 @@ def verificarNotificaciones(segundos):
         Archivo_Notificaciones.close()
         time.sleep(segundos)
 
-hilo = threading.Thread(target=verificarNotificaciones, args=(60,))
+hilo = threading.Thread(target=verificarNotificaciones, args=(3600,))
 hilo.start()
 
 principal.mainloop()
