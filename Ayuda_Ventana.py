@@ -3,11 +3,9 @@ from PIL import ImageTk, Image
 import Ayudas
 #from MenuBar import MenuClass
 
-def Ayuda_Ventana():
+def Ayuda_Ventana(Ayuda_ventana):
         
     #-----Ventana de Ayuda_ventana-----
-    Ayuda_ventana = Tk()
-
     Ayuda_ventana.iconbitmap(Ayudas.icono)
 
     Ayuda_ventana.title("Inventario")
@@ -25,22 +23,18 @@ def Ayuda_Ventana():
     titulo.place(relx=0.50, rely=0.08)
 
     #-----Logo-----
+    global ImgInterrogacion
     ImgInterrogacion = ImageTk.PhotoImage(
         Image.open("Imagenes/interrogacion.png"))
-    LogoInterrogacion = Label(image=ImgInterrogacion,
+    LogoInterrogacion = Label(Ayuda_ventana,image=ImgInterrogacion,
                             height=70, width=70, bg=Ayudas.azul_hielo)
     LogoInterrogacion.place(relx=0.40, rely=0.05)
 
     #-----Botones-----
-    Boton_Ayuda = Button(height=4, width=17, text="Ayuda",
+    Boton_Ayuda = Button(Ayuda_ventana,height=4, width=17, text="Ayuda",
                         bg=Ayudas.gris, font=Ayudas.subtitulo, fg=Ayudas.blanco)
     Boton_Ayuda.place(relx=0.378, rely=0.32)
 
-    Boton_AcercaDe = Button(height=4, width=17, text="Acerca de...",
+    Boton_AcercaDe = Button(Ayuda_ventana,height=4, width=17, text="Acerca de...",
                             bg=Ayudas.gris, font=Ayudas.subtitulo, fg=Ayudas.blanco)
     Boton_AcercaDe.place(relx=0.378, rely=0.62)
-
-
-    Ayuda_ventana.mainloop()
-
-Ayuda_Ventana()

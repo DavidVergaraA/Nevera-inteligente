@@ -1,20 +1,20 @@
 Archivo plano para obtener cuando lanzar notificaciones
 -------------------------------------------------------
 Arepas=
-0
+3
 -------
 Leche=
-0
+2
 -------
 Carne=
-0
+2
 -------
 Huevos=
-0
+6
 -------
 Tomate=
-0
+5
 -------
 Salchichas=
-0
+4
 -----------

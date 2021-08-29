@@ -5,64 +5,108 @@ import tkinter.ttk
 from tkinter.ttk import Entry
 from tkinter.ttk import Button
 
-    #Ventana registrar
-registrar = Tk()
+def Registrar_Ventana(registro):
 
-registrar.iconbitmap(Ayudas.icono)
+    registro = Tk()
 
-registrar.title("Ingreso de Usuario")
-registrar.configure(background= Ayudas.blanco)
+    registro.iconbitmap(Ayudas.icono)
 
-posx = int(registrar.winfo_screenwidth() / 2 - (Ayudas.ancho / 2))
-posy = int(registrar.winfo_screenheight() / 2 - (Ayudas.alto / 2))
-registrar.geometry("{}x{}+{}+{}".format(Ayudas.ancho, Ayudas.alto, posx, posy))
-registrar.resizable(0, 0)
+    registro.title("Registrar Usuario")
 
-    #Imagenes
-fondo=PhotoImage (file="Imagenes/fondo.png")
-lblImagen= Label (registrar, image=fondo)
-lblImagen.place(x=209.5, y=93)
-lblImagen.configure(borderwidth= 1)
+    registro.configure(bg = Ayudas.blanco)
+    posx = int(registro.winfo_screenwidth() / 2 - (Ayudas.ancho / 2))
+    posy = int(registro.winfo_screenheight() / 2 - (Ayudas.alto / 2))
+    registro.geometry(
+        "{}x{}+{}+{}".format(Ayudas.ancho, Ayudas.alto, posx, posy))
+    registro.resizable(0, 0)
 
-logo=PhotoImage (file="Imagenes/logo.png")
-lblImagen= Label (registrar, image=logo)
-lblImagen.place(x=283.5, y=16)
-lblImagen.configure(borderwidth= 0)
+    # -----Imagenes-----
+    Imgfondo = ImageTk.PhotoImage(Image.open("Imagenes/fondo.png"))
+    Logofondo = Label(image=Imgfondo, height=355, width=300, bg=Ayudas.azul_claro)
+    Logofondo.place(in_=registro, anchor= "c", relx=0.5, rely=0.545)
 
-    #Titulo
-titulo= Label(registrar, text= "Registrar Usuario", font= Ayudas.titulo, bg= Ayudas.azul_claro, fg= Ayudas.negro_letra)
-titulo.place(x=230, y=175)
+    Imglogo = ImageTk.PhotoImage(Image.open("Imagenes/logo.png"))
+    Logologo = Label(image=Imglogo, height=154, width=154, bd=0 )
+    Logologo.place(relx=0.4, rely=0.061)
 
-    #Nombre
-label_nombre= Label(registrar, text="Nombre :", font=Ayudas.normal, fg=Ayudas.negro_letra, bg= Ayudas.azul_claro)
-label_nombre.place(x=220, y=230)
+    #-----Titulo-----
+    titulo= Label(registro, text= "Registrarse", font= Ayudas.titulo, bg= Ayudas.azul_claro, fg= Ayudas.negro_letra)
+    titulo.place(in_=registro, anchor="c", relx=0.5, rely=0.4)
 
-entry_contrasena = Entry(registrar, width=27)
-entry_contrasena.place(x=310.1, y=230)
+    registro.overrideredirect(1)
 
-    #Correo
-label_correo= Label(registrar, text="Correo :", font=Ayudas.normal, fg=Ayudas.negro_letra, bg= Ayudas.azul_claro)
-label_correo.place(x=220, y=280)
+    def crear_barra():
+        barra = Frame(registro, bd=1, relief = RAISED)
 
-entry_correo = Entry(registrar, width=32)
-entry_correo.place(x=280, y=280)
+        def salir():
+            registro.quit()
+            #FIN salir
 
-    #Contraseña
-label_contrasena= Label(registrar, text="Contraseña :", font=Ayudas.normal, fg=Ayudas.negro_letra, bg= Ayudas.azul_claro)
-label_contrasena.place(x=220, y=330)
+        def perfil_usuario():
+            registro.destroy()
 
-entry_contrasena = Entry(registrar, width=27)
-entry_contrasena.place(x=310.1, y=330)
+            #FIN perfil_usuario
 
-    #Botón Registrarse
-buton_ingresar= Button(registrar,
-                       text= "Registrarse",
-                       style= "C.TButton")
-buton_ingresar.place(x= 320, y= 375)
+        def inventario():
+            registro.quit()
+            #FIN inventario
 
-#Boton volver
-boton_volver= Button(registrar,
-                    text="Volver")
-boton_volver.place(x=600, y=450)
+        def ayuda():
+            registro.quit()
+            #FIN ayuda
 
-registrar.mainloop()
+        def cerrar_sesion():
+            registro.destroy()
+
+            #FIN cerrar_sesion
+
+        perfil_usuario = Button(barra, text="Perfil del Usuario", command=salir)
+        perfil_usuario.pack(side=LEFT, padx=2, pady=2)
+
+        inventario = Button(barra, text="Inventario", command=salir)
+        inventario.pack(side=LEFT, padx=2, pady=2)
+
+        ayuda = Button(barra, text="Ayuda", command=salir)
+        ayuda.pack(side=LEFT, padx=2, pady=2)
+
+        Salir = Button(barra, text = "Salir", command = salir)
+        Salir.pack(side = RIGHT, padx = 2, pady = 2)
+
+        cerrar_sesion = Button(barra, text="Cerrar sesión", command=cerrar_sesion)
+        cerrar_sesion.pack(side=RIGHT, padx=2, pady=2)
+
+        barra.pack(side = TOP, fill = X)
+    crear_barra()
+
+    def crear_panel_registro():
+        login = Frame(registro, bd = 1, relief = RAISED, background = Ayudas.azul_claro)
+        login.place(in_=registro, anchor= "c", relx=0.5, rely=0.62)
+
+        # -----Nombre de usuario-----
+        usuariolabel = Label(login, text="Usuario:", background=Ayudas.azul_claro)
+        usuariolabel.grid(row=0, column=0, sticky="w", padx=10, pady=10);
+        usuario = Entry(login)
+        usuario.grid(row=0, column=1, padx=10, pady=10)
+        usuario.config(justify="center")
+
+        # -----Correo-----
+        correolabel = Label(login, text="Correo:", background= Ayudas.azul_claro)
+        correolabel.grid(row=2, column=0, sticky= "w" ,padx=10, pady=10);
+        correo = Entry(login)
+        correo.grid(row=2, column=1, padx=10, pady=10)
+        correo.config(justify="center")
+
+        # -----Contraseña-----
+        contrasenalabel = Label(login, text="Contraseña:", background= Ayudas.azul_claro)
+        contrasenalabel.grid(row=4, column=0, sticky= "w" ,padx=10, pady=10);
+        contrasena = Entry(login)
+        contrasena.grid(row=4, column=1, padx=10, pady=10)
+        contrasena.config(show= "*", justify="center")
+
+        boton_registrarse= Button(login, text= "Registrar")
+        boton_registrarse.grid(row=5, column=0, sticky= "w", padx=10, pady=10)
+        #FIN crear_panel_login
+    crear_panel_registro()
+    
+    registro.mainloop()
+    # FIN crear_registro

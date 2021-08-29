@@ -126,89 +126,8 @@ class FormularioNotificaciones:
         BotonOk = Button(FormularioVentana,text = "OK",bg= Ayudas.naranja, font= Ayudas.boton_pequeno, width = 7, height= 1, command= lambda:[TomarValores(),SalirFormulario()])
         BotonOk.place(relx=0.50,rely=0.85)
 
-    #-------------------Esto irá en el código main------------------------
-    
-    Archivo_Notificaciones = open ("Archivos planos\\Notificaciones.txt", "r")
-    LineasNotificaciones = Archivo_Notificaciones.readlines()
-
-    Archivo_Inventario = open("Archivos planos\InventarioInfo.txt", "r")
-    LineasInventario = Archivo_Inventario.readlines()
-
-    if ( int(LineasNotificaciones[3]) >= (int(LineasInventario[3])) ):
-
-        Notificacion = ToastNotifier()
-        Notificacion.show_toast("Es hora de pedir más arepas!!!","Tienes solo " + LineasInventario[3] + " arepas en tu nevera",Ayudas.icono, duration=10)
-
-    elif ( int(LineasNotificaciones[6]) >= (int(LineasInventario[6])) ):
-    
-        Notificacion = ToastNotifier()
-        Notificacion.show_toast("Es hora de pedir más bolsas de leche!!!","Tienes solo " + LineasInventario[6] + " bolsas de leche en tu nevera",Ayudas.icono, duration=10)
-
-    elif ( int(LineasNotificaciones[9]) >= (int(LineasInventario[9])) ):
-    
-        Notificacion = ToastNotifier()
-        Notificacion.show_toast("Es hora de pedir más libras de carne!!!","Tienes solo " + LineasInventario[9] + " libras de carne en tu nevera",Ayudas.icono, duration=10)
-
-    elif ( int(LineasNotificaciones[12]) >= (int(LineasInventario[12])) ):
-    
-        Notificacion = ToastNotifier()
-        Notificacion.show_toast("Es hora de pedir más huevos!!!","Tienes solo " + LineasInventario[12] + " huevos en tu nevera",Ayudas.icono, duration=10)
-
-    elif ( int(LineasNotificaciones[15]) >= (int(LineasInventario[15])) ):
-    
-        Notificacion = ToastNotifier()
-        Notificacion.show_toast("Es hora de pedir más tomates!!!","Tienes solo " + LineasInventario[15] + " tomates en tu nevera",Ayudas.icono, duration=10)
-
-    elif ( int(LineasNotificaciones[18]) >= (int(LineasInventario[18])) ):
-    
-        Notificacion = ToastNotifier()
-        Notificacion.show_toast("Es hora de pedir más salchichas!!!","Tienes solo " + LineasInventario[18] + " salchichas en tu nevera",Ayudas.icono, duration=10)
-
-    Archivo_Inventario.close()
-    Archivo_Notificaciones.close()
 
 
 
 
 
-
-
-
-
-
-
-
-
-        
-"""#-----StringVar-----
-        Hora = StringVar()
-        Minutos = StringVar()
-        Segundos = StringVar()
-
-        #-----Entry-----
-        global EntryHora
-        EntryHora = Entry(FormularioVentana,width=3,font=Ayudas.boton_pequeno, textvariable=Hora )
-        EntryHora.place(relx=0.2,rely= 0.5)
-
-        global EntryMinutos
-        EntryMinutos = Entry(FormularioVentana,width=3,font=Ayudas.boton_pequeno, textvariable=Minutos )
-        EntryMinutos.place(relx=0.4,rely= 0.5)
-
-        global EntrySegundos
-        EntrySegundos = Entry(FormularioVentana,width=3,font=Ayudas.boton_pequeno, textvariable=Segundos)
-        EntrySegundos.place(relx=0.6,rely= 0.5)"""
-
-"""while True:
-
-    current_time = time.strftime("%H:%M:%S")
-
-    if current_time=="16:29:00":
-        print(current_time)
-        break
-    else:
-        pass
-
-
-hr=ToastNotifier()
-
-hr.show_toast("Alarm","This is the measage")"""
